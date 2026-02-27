@@ -6,6 +6,7 @@ use serde::Deserialize;
 use crate::util::{DAY, HOUR, WEEK};
 
 #[derive(Clone, Debug, Deserialize)]
+#[cfg_attr(test, derive(serde::Serialize))]
 pub struct Dir<'a> {
     #[serde(borrow)]
     pub path: Cow<'a, str>,

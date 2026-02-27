@@ -9,6 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Automatically migrate data from the legacy bincode-backed `db.zo` file
+  when upgrading to the sqlite backend (only performed if no
+  `db.sqlite3` exists).
+
 ### Fixed
 
 - Bash/Zsh: fix `z` failing on Cygwin/MSYS2 due to `cygpath` being passed a bad string.
